@@ -1,0 +1,6 @@
+<h1><%= @user.name %>のMicroposts一覧</h1>
+
+<% @micropost.each do |micropost| %>
+
+
+<% end %>

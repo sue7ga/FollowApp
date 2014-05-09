@@ -1,0 +1,30 @@
+<h1><%= @user.name %>’¤Î’¥Þ’¥¤’¥¯’¥í’¥Ý’¥¹’¥È’°ì’Í÷</h1>
+
+<%= render 'stats' %>
+
+<br><br>
+
+<%= @user.name %>’¤Î’¥Ý’¥¹’¥È’°ì’Í÷
+<br><br>
+<% @microposts.each do |micropost| %>
+<%= micropost.content %>
+<br>
+<% end %>
+
+<h1>Followers’¤Î’¥Ý’¥¹’¥È’°ì’Í÷</h1>
+
+<br>
+
+<% @follwers_microposts.each do |micropost| %>
+ 
+<%= micropost.content %>
+
+<% @user = User.find_by(id: micropost.user_id) %>
+
+Posted By  <%= @user.name %>
+
+<br>
+<% end %>
+<br>
+
+

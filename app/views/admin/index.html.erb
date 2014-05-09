@@ -1,0 +1,14 @@
+<h1></h1>
+
+
+<%= form_for(@micropost) do |f| %>
+
+  <%= f.label :content %>
+  <%= f.text_area :content,:size => "30x10" %>
+  
+  <%= f.submit %>
+<% end %>
+
+<br>
+
+<%= link_to 'Logout', @admin ,method: :delete, data: {confirm: 'Are you sure?'} %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+ <strong>Name:</string>
+ <%= @user.name %>
+ <br>
+ <strong>Email:</string>
+ <%= @user.email %>
+</p>
+
+<%= form_for(current_user.relationships.build(followed_id: @user.id)) do |f|%>
+   <%= f.hidden_field :followed_id %>
+ <%= f.submit "Follow",class:"btn btn-large btn-primary" %>
+<% end %>
+
+
+<h1><%= @user.name %>のマイクロポスト一覧</h1>
+<br>
+
+<% @microposts.each do |post| %>
+
+<%= post.content %>
+<br>
+
+<% end %>
+
+

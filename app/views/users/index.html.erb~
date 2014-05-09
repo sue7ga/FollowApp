@@ -1,0 +1,10 @@
+<tr>
+  <th>名前</th>
+  <th>メールアドレス</th>
+</tr>
+
+
+<% @users.each do |user| %>
+
+
+<% end %>

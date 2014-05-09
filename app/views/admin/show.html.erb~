@@ -1,0 +1,22 @@
+<h1><%= @user.name %>のマイクロポスト一覧</h1>
+
+<%= render 'stats' %>
+
+<br>
+
+<% @microposts.each do |micropost| %>
+
+<%= micropost.content %>
+<br>
+<% end %>
+
+
+<% @followers.each do |follower| %>
+ 
+<%= follower.name %>
+
+<% end %>
+
+<br>
+
+

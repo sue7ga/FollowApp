@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+ <strong>Name:</string>
+ <%= @user.name %>
+ <br>
+ <strong>Email:</string>
+ <%= @user.email %>
+</p>
+
+<br>
+
+<%= render 'stats' %>
+
+<br>
+
+<% if @current_user.following?(@user) %>
+ <%= render 'unfollow' %>  
+<% else %>
+ <%= render 'follow' %>
+<% end %>
+
+<h1><%= @user.name %>のマイクロポスト一覧</h1>
+<br>
+
+<% @microposts.each do |post| %>
+
+<%= post.content %>
+<br>
+
+<% end %>
+
+
